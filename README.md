@@ -9,6 +9,7 @@ Itch Page: https://zirosi.itch.io/hscgmfavsgj
 Github Page: https://github.com/zirosi/hyper-serious-circle-game
 
 
+
 ## Controls
 
 This is a one button game, you can either use the "w" key or just click with left click
