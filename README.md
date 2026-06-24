@@ -4,6 +4,8 @@ Have YOU ever wanted to click a circle. Well now you can, professionally. Get th
 
 Professionally I would recommend downloading then playing the game, our tight budget made the web build 'professionally lacking'
 
+Itch Page: https://zirosi.itch.io/hscgmfavsgj
+Github Page: https://github.com/zirosi/hyper-serious-circle-game
 
 
 ## Controls
