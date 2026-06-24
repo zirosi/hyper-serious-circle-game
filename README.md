@@ -12,7 +12,7 @@ This is a one button game, you can either use the "w" key or just click with lef
 
 
 
-## Install Instructions *Unneeded*
+## Install Instructions (*Unneeded*)
 
 If you are on a desktop computer the x86_64 should work, but if you have an Arm64 cpu (mainly on new laptops) you will need to download the Arm64 variant. 
 
