@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dfn7wb5l3rwva"]
+
+[ext_resource type="Script" uid="uid://dn6eoif5h8cs7" path="res://scripts/end_screen.gd" id="1_kq7ac"]
+
+[node name="end_screen" type="Control" unique_id=1896587123]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kq7ac")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=920963991]
+layout_mode = 0
+offset_right = 1024.0
+offset_bottom = 768.0
+color = Color(0, 0, 0, 0.5254902)
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=2093416960]
+layout_mode = 0
+offset_top = 278.0
+offset_right = 1025.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 24
+text = "Your Score: 0"
+alignment = 1
+editable = false
+flat = true
+
+[node name="restart" type="Button" parent="." unique_id=1854499232]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 360.0
+offset_right = 606.0
+offset_bottom = 407.0
+text = "restart"
+
+[node name="end" type="Button" parent="." unique_id=262891436]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 417.0
+offset_right = 606.0
+offset_bottom = 464.0
+text = "quit"
+
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="end" to="." method="_on_end_pressed"]

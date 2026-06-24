@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bh4alrcqeya33"]
+
+[ext_resource type="Script" uid="uid://de2mfh1mmoudl" path="res://scripts/circle_area.gd" id="1_ihglr"]
+[ext_resource type="Texture2D" uid="uid://cbul0gc7vu7xv" path="res://assets/circle.png" id="1_jl7wi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihglr"]
+size = Vector2(20, 51)
+
+[node name="circle_area" type="Area2D" unique_id=223945679]
+script = ExtResource("1_ihglr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1984062186]
+position = Vector2(1.5258789e-05, -1.5258789e-05)
+scale = Vector2(0.4497071, 0.4497071)
+texture = ExtResource("1_jl7wi")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1981313886]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1876612139]
+position = Vector2(0, -145.5)
+shape = SubResource("RectangleShape2D_ihglr")

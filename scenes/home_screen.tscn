@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cmr2ybd1jlrr4"]
+
+[ext_resource type="Script" uid="uid://motih265ofdn" path="res://scripts/home_screen.gd" id="1_lapbl"]
+[ext_resource type="AudioStream" uid="uid://dydp0p8lcwaj5" path="res://assets/end.wav" id="2_ujmiq"]
+
+[node name="home_screen" type="Control" unique_id=1055975557]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lapbl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1217120961]
+layout_mode = 0
+offset_right = 1024.0
+offset_bottom = 768.0
+color = Color(0.14044744, 0.14044747, 0.14044738, 1)
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=107556869]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 289.0
+offset_right = 1023.0
+offset_bottom = 393.0
+theme_override_font_sizes/font_size = 29
+text = "Hyper Serious Circle Game Made For A Very Serious Game Jam"
+placeholder_text = "HSCGMFAVSGJ"
+alignment = 1
+editable = false
+flat = true
+
+[node name="Button" type="Button" parent="." unique_id=1921413336]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 401.0
+offset_right = 672.0
+offset_bottom = 459.0
+theme_override_font_sizes/font_size = 22
+text = "start"
+
+[node name="end" type="AudioStreamPlayer2D" parent="." unique_id=1700940125]
+stream = ExtResource("2_ujmiq")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

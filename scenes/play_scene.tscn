@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bhr56o1x2yws2"]
+
+[ext_resource type="Script" uid="uid://cjrgykximsypj" path="res://scripts/play_scene.gd" id="1_wklqy"]
+[ext_resource type="PackedScene" uid="uid://bh4alrcqeya33" path="res://scenes/circle_area.tscn" id="2_wklqy"]
+[ext_resource type="PackedScene" uid="uid://dfn7wb5l3rwva" path="res://scenes/end_screen.tscn" id="3_que2y"]
+[ext_resource type="AudioStream" uid="uid://dydp0p8lcwaj5" path="res://assets/end.wav" id="4_kdvgv"]
+
+[node name="play_scene" type="Node2D" unique_id=834355805]
+script = ExtResource("1_wklqy")
+
+[node name="dots" type="Node2D" parent="." unique_id=1657621456]
+
+[node name="circle_area" parent="." unique_id=223945679 instance=ExtResource("2_wklqy")]
+
+[node name="score" type="LineEdit" parent="." unique_id=106608838]
+offset_left = -194.0
+offset_top = -293.0
+offset_right = 194.0
+offset_bottom = -227.0
+theme_override_font_sizes/font_size = 42
+text = "0"
+alignment = 1
+editable = false
+flat = true
+
+[node name="end_screen" parent="." unique_id=1896587123 instance=ExtResource("3_que2y")]
+visible = false
+offset_left = -512.0
+offset_top = -384.0
+offset_right = -512.0
+offset_bottom = -384.0
+
+[node name="end" type="AudioStreamPlayer2D" parent="." unique_id=75960088]
+stream = ExtResource("4_kdvgv")
+
+[connection signal="body_shape_entered" from="circle_area" to="." method="_on_circle_area_body_shape_entered"]
+[connection signal="body_shape_exited" from="circle_area" to="." method="_on_circle_area_body_shape_exited"]

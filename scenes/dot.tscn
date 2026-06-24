@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://crdbjojbdord6"]
+
+[ext_resource type="Script" uid="uid://bm2pspalg5hbr" path="res://scripts/dot.gd" id="1_1c7to"]
+[ext_resource type="Texture2D" uid="uid://fd0rfolkrie8" path="res://assets/dot.png" id="1_c4igg"]
+[ext_resource type="AudioStream" uid="uid://cjy7fy2jqpk1u" path="res://assets/pop.wav" id="3_1fxdc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1c7to"]
+radius = 19.006578
+
+[node name="dot" type="StaticBody2D" unique_id=671282933]
+collision_mask = 2
+script = ExtResource("1_1c7to")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=103168663]
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_c4igg")
+offset = Vector2(0, -1900)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1937042111]
+position = Vector2(0, -142.5)
+shape = SubResource("CircleShape2D_1c7to")
+
+[node name="pop_sfx" type="AudioStreamPlayer2D" parent="." unique_id=1517131135]
+stream = ExtResource("3_1fxdc")
